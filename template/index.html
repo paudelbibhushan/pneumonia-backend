@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pneumonia Detection</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image-input" accept="image/*" />
+            <button type="submit" id="upload-button">Upload</button>
+        </form>
+        <div id="result-section" style="display: none;">
+            <h2>Result:</h2>
+            <div id="result-container"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
